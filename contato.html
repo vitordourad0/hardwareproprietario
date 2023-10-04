@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fale Conosco: Suas Perguntas e Comentários são Bem-Vindos</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/png" href="imgs/call_FILL0_wght400_GRAD0_opsz48.png">	<!--Ícone da página-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+	<script type="text/javascript">	
+		function validar() {
+			var nome = form1.nome.value;
+			var fone = form1.fone.value;
+			var RG	= form1.RG.value;
+			var endereco = form1.endereco.value;
+			var email = form1.email.value;
+			
+			if(nome.length < 5) {
+				alert('Digite seu nome completo.');
+				form1.nome.focus();
+				return false;
+			}
+			if(fone == "") {
+				alert('Preencha o campo com seu telefone.');
+				form1.fone.focus();
+				return false;
+			}
+			if(email == "") {
+				alert('Preencha o campo com seu email.');
+				form1.email.focus();
+				return false;
+			}
+			if(endereco == "") {
+				alert('Preencha o campo com seu endereço.');
+				form1.endereco.focus();
+				return false;
+			}
+			if(RG == "") {
+				alert('Preencha o campo com seu RG.');
+				form1.RG.focus();
+				return false;
+			}
+			return true;
+		}
+
+		function limparCampos() {
+			// Limpa o campo de nome
+			document.form1.nome.value = "";
+			// Limpa o campo de endereço
+			document.form1.endereco.value = "";
+			// Limpa o campo de telefone
+			document.form1.fone.value = "";
+			// Limpa o campo de email
+			document.form1.email.value = "";
+			// Limpa o campo de comentário
+			document.form1.comentario.value = "";
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<a href="index.html" class="logo"><img class="processador" src="imgs/memory_FILL0_wght400_GRAD0_opsz48.png" alt="Essa é a imagem do processador" /></a>
+		  </div>
+			<nav>
+			  <input type="checkbox" name="" id="toggle">
+			  <label for="toggle"><i class="material-icons">menu</i></label>
+			  <div class="menu">
+				<ul>
+				  <li><a href="index.html">Home</a></li>
+				  <li><a href="sobre.html">Sobre</a></li>
+				  <li><a href="modelo.html">Modelo</a></li>
+				  <li><a href="contato.html">Contato</a></li>
+				</ul>
+			  </div>
+			</nav>
+	</header>
+
+
+		<div class="texthistoria">
+			<selection>
+				<h1 id="palavraform">Fale Conosco</h1>
+				<center><form name="form1" method="post" action="miniform.html" onsubmit="return validar();">
+					Nome:<input type="text" name="nome"><br>
+					Sexo :<input type="radio" name="state">Masculino
+					<input type="radio" name="state">Feminino<br>
+					Cidade:
+					<select name="cidade">
+						<option>Selecione</option>
+						<option>Sumaré</option>
+						<option>Americana</option>
+						<option>Nova Odessa</option>
+						<option>Paulínia</option>
+						<option>Limeira</option>			
+					</select><br>
+					Fone:<input type="text" name="fone"><br>
+					RG:<input type="text" name="RG"><br>
+					Endereço:<input type="text" name="endereco"><br>
+					Email:<input type="text" name="email"><br>
+					<textarea cols="45" rows="20" name="comentario" placeholder="Deixe seu comentário"></textarea><br><br>
+					<input type="submit" value="enviar">
+					<input type="button" value="limpar" onclick="limparCampos()">
+				</form></center>
+				
+			</h3>
+		   </selection>
+</div>   
+
+<footer id="rodapecontato">
+	<div img align="right"> <a href="#"> <img class="ancor" src="imgs/arrow_upward_FILL0_wght400_GRAD0_opsz48.png" width="4%" /></a> </div>
+	<h5>Vitor Dourado 2023 - &copyTodos os direitos reservados
+	<br>
+	<center>Trabalho acadêmico - Sem fins lucrativos</h5></center>
+  </footer>
+</body>
+</html>
